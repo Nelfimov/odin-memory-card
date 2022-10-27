@@ -33,9 +33,27 @@ const IMAGES_LIST = [
 const CardList = (props) => {
   const {checkStack} = props;
 
+  const shuffle = () => {
+    const array = [...IMAGES_LIST];
+    let currentIndex = array.length;
+    let randomIndex;
+
+    while (currentIndex != 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+
+      [array[currentIndex], array[randomIndex]] = [
+        array[randomIndex], array[currentIndex]];
+    }
+
+    console.log(array);
+
+    return array;
+  };
+
   return (
     <div className='card-container'>
-      {IMAGES_LIST.map((image) => (
+      {shuffle().map((image) => (
         <Card
           id={image.id}
           key={image.id}
