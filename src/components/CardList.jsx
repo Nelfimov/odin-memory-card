@@ -1,6 +1,7 @@
 /* eslint-disable new-cap */
 import React from 'react';
 import Card from './Card';
+import propTypes from 'prop-types';
 import Image1 from '../images/1.png';
 import Image2 from '../images/2.png';
 import Image3 from '../images/3.png';
@@ -26,16 +27,28 @@ const IMAGES_LIST = [
 
 /**
  * Generate and render all cards
+ * @param {Map} props
  * @return {JSX}
  */
-const CardList = () => {
+const CardList = (props) => {
+  const {checkStack} = props;
+
   return (
     <div className='card-container'>
       {IMAGES_LIST.map((image) => (
-        Card(image.id, image.src)
+        <Card
+          id={image.id}
+          key={image.id}
+          src={image.src}
+          checkStack={checkStack}
+        />
       ))}
     </div>
   );
+};
+
+CardList.propTypes = {
+  checkStack: propTypes.func.isRequired,
 };
 
 export default CardList;
