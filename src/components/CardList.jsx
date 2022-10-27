@@ -46,8 +46,6 @@ const CardList = (props) => {
         array[randomIndex], array[currentIndex]];
     }
 
-    console.log(array);
-
     return array;
   };
 

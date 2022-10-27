@@ -4,7 +4,7 @@ import propTypes from 'prop-types';
 import '../styles/GameContainer.css';
 
 const GameContainer = (props) => {
-  const {checkStack} = props;
+  const {checkStack, won} = props;
 
   const changeTitle = (string) => {
     return (
@@ -14,7 +14,9 @@ const GameContainer = (props) => {
 
   return (
     <div id='game-container' className='game-container'>
-      {changeTitle()}
+      {won ?
+        changeTitle('You win!') :
+        changeTitle('Click on image to continue')}
       <CardList checkStack={checkStack} />
     </div>
   );
@@ -22,6 +24,7 @@ const GameContainer = (props) => {
 
 GameContainer.propTypes = {
   checkStack: propTypes.func.isRequired,
+  won: propTypes.bool.isRequired,
 };
 
 export default GameContainer;

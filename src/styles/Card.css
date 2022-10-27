@@ -2,6 +2,8 @@ div.card {
   width: fit-content;
   border: 1px solid black;
   box-shadow: 5px 5px 5px black;
+  width: min(200px, 25vw);
+  height: min(200px, 25vw);
 }
 
 div.card:hover {
@@ -9,8 +11,10 @@ div.card:hover {
 }
 
 img.card {
-  width: min(25vh, 25vw);
+  width: min(200px, 25vw);
+  height: min(200px, 25vh);
   transition: all .1s ease-in-out;
+  object-fit: cover;
 }
 
 img.card:hover {

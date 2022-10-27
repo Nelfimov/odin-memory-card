@@ -12,6 +12,7 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [stack, setStack] = useState([]);
+  const [won, setWon] = useState(false);
 
   useEffect(() => {
     setBestScore((prevState) => (prevState < score ? score : prevState));
@@ -37,6 +38,9 @@ const App = () => {
     if (!stack.some((item) => item === id)) {
       addToStack(id);
       incrementScore();
+      if (stack.length === 9) {
+        switchWon();
+      };
     } else {
       emptyStack();
       resetScore();
@@ -48,16 +52,21 @@ const App = () => {
     setBestScore(0);
   };
 
+  const switchWon = () => {
+    setWon(!won);
+    restartGame();
+  };
+
   return (
     <div id='App' className='App'>
       <Header
         score={score}
         bestScore={bestScore}
-        stack={stack}
         restartGame={restartGame}
       />
       <GameContainer
         checkStack={checkStack}
+        won={won}
       />
     </div>
   );

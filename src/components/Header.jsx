@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 import '../styles/Header.css';
 
 const Header = (props) => {
-  const {score, bestScore, restartGame, stack} = props;
+  const {score, bestScore, restartGame} = props;
 
   return (
     <div className='header'>
@@ -13,7 +13,6 @@ const Header = (props) => {
       <div className='score'>
         <p>Score: {score}</p>
         <p>Best score: {bestScore}</p>
-        <p>Stack: {stack}</p>
         <button type='button' onClick={restartGame}>Restart</button>
       </div>
     </div>
