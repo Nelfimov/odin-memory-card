@@ -1,5 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import '../styles/Header.css';
 
 const Header = (props) => {
   const {score, bestScore, restartGame} = props;
@@ -7,7 +8,7 @@ const Header = (props) => {
   return (
     <div className='header'>
       <div className='logo'>
-        <h1>Memory card Game</h1>
+        <h1>MEMORY CARD GAME</h1>
       </div>
       <div className='score'>
         <p>Score: {score}</p>

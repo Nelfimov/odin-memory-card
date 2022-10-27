@@ -5,7 +5,7 @@ import Header from './Header';
 import GameContainer from './GameContainer';
 
 const App = () => {
-  const [score, setScore] = useState(10);
+  const [score, setScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
 
   useEffect(() => {

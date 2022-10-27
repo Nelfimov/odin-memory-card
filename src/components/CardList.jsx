@@ -10,6 +10,7 @@ import Image6 from '../images/6.png';
 import Image7 from '../images/7.png';
 import Image8 from '../images/8.png';
 import Image9 from '../images/9.png';
+import '../styles/CardList.css';
 
 const IMAGES_LIST = [
   {id: 1, src: Image1},

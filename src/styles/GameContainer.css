@@ -1,0 +1,9 @@
+div.game-container {
+  background-color: grey;
+  text-align: center;
+}
+
+h2 {
+  padding: 20px 0;
+  font-size: 2rem;
+}

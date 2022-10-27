@@ -1,0 +1,12 @@
+div.header {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px;
+  background-color: rgba(0, 0, 0, 0.244);
+}
+
+h1 {
+  font-size: 3rem;
+}

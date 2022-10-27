@@ -1,0 +1,18 @@
+div.card {
+  width: fit-content;
+  border: 1px solid black;
+  box-shadow: 5px 5px 5px black;
+}
+
+div.card:hover {
+  cursor: pointer;
+}
+
+img.card {
+  width: min(25vh, 25vw);
+  transition: all .1s ease-in-out;
+}
+
+img.card:hover {
+  transform: scale(1.1);
+}
