@@ -14,9 +14,11 @@ const GameContainer = (props) => {
 
   return (
     <div id='game-container' className='game-container'>
-      {won ?
-        changeTitle('You win!') :
-        changeTitle('Click on image to continue')}
+      {
+        won ?
+          changeTitle('You win!') :
+          changeTitle('Click on image to continue')
+      }
       <CardList checkStack={checkStack} />
     </div>
   );

@@ -16,7 +16,7 @@ const Card = (props) => {
   };
 
   return (
-    <div className='card' id={id} key={id}>
+    <div className='card' key={id}>
       <img src={src} alt={id} id={id} onClick={handleClick} className='card'/>
     </div>
   );

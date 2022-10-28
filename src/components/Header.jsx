@@ -23,7 +23,6 @@ Header.propTypes = {
   score: propTypes.number.isRequired,
   bestScore: propTypes.number.isRequired,
   restartGame: propTypes.func.isRequired,
-  stack: propTypes.array.isRequired,
 };
 
 export default Header;
